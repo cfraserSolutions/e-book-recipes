@@ -1,0 +1,64 @@
+<form #recipeForm="ngForm" (ngSubmit)="onSubmit(recipeForm)">
+  <input type="hidden" name="$key" #$key="ngModel" [(ngModel)]="recipeService.selectedRecipe.$key">
+  
+  <div class="form-group">
+    <label >recipeID</label>
+    <input class="form-control" name="recipeID" #name="ngModel" [(ngModel)]="recipeService.selectedRecipe.recipeID" placeholder="Recipe ID">
+  </div>
+<!--   
+  <div class="form-group">
+    <label >title</label>
+    <input class="form-control" name="title" #name="ngModel" [(ngModel)]="recipeService.selectedRecipe.title" placeholder="Title">
+  </div>
+  
+  <div class="form-group">
+    <label >category</label>
+    <input class="form-control" name="category" #name="ngModel" [(ngModel)]="recipeService.selectedRecipe.category" placeholder="Category">
+  </div>
+  
+  <div class="form-group">
+    <label >description</label>
+    <input class="form-control" name="description" #name="ngModel" [(ngModel)]="recipeService.selectedRecipe.description" placeholder="Description">
+  </div>
+
+  <div class="form-group">
+    <label >servingSize</label>
+    <input class="form-control" name="servingSize" #name="ngModel" [(ngModel)]="recipeService.selectedRecipe.servingSize" placeholder="ServingSize">
+  </div>
+
+  <div class="form-group">
+    <label >ingredients</label>
+    <input class="form-control" name="ingredients" #name="ngModel" [(ngModel)]="recipeService.selectedRecipe.ingredients" placeholder="Ingredients">
+  </div>
+
+  <div class="form-group">
+    <label >procedure</label>
+    <input class="form-control" name="procedure" #name="ngModel" [(ngModel)]="recipeService.selectedRecipe.procedure" placeholder="Procedure">
+  </div>
+   -->
+  
+  <!-- <div class="form-group">
+    <label >Salary</label>
+    <div class="input-group">
+      <div class="input-group-addon">
+        <i class="fa fa-dollar"></i>
+      </div>
+      <input class="form-control" name="salary" #name="ngModel" [(ngModel)]="recipeService.selectedRecipe.salary" placeholder="Salary">
+    </div>
+  </div>      -->
+
+  <!-- BUTTONS !!!! -->
+  
+  <div class="form-group">
+    
+    <button type ="submit" class =" btn btn-default" [disabled]="!recipeForm.valid">
+      <i class="fa fa-floppy-o"></i>
+    Submit</button>
+
+    <button type ="button" class =" btn btn-default" (click)="resetForm(recipeForm)">
+      <i class="fa fa-repeat"></i>
+    Reset</button>
+
+    <!-- <button type="button" class =" btn btn-default">Delete</button> -->
+  </div>
+</form>

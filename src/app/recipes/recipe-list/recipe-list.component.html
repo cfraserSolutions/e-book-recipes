@@ -1,0 +1,19 @@
+<h6 class="text-center">Recipe Register</h6>
+<table class="table table-sm table-hover">
+  <tr *ngFor= "let recipe of recipeList">
+    <td >{{recipe.recipeID}}</td>
+    <!-- <td>{{employee.position}}</td> -->
+    <td>
+      <button class="btn" (click)="onEdit(recipe)">
+          <a class="btn">
+            Edit
+          </a>
+      </button>
+      <button class="btn" (click)="onDelete(recipe.$key)">
+        <a class="btn">
+          Delete
+        </a>
+      </button>
+    </td>
+  </tr>
+</table>

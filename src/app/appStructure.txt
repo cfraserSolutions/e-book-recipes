@@ -1,0 +1,21 @@
+recipe 
+    - userID :string : foreign key
+    - recipeID: string : primary key
+    - title : string
+    - category: string (entre, dessert, appetizer etc)
+    - description :string
+    - servingSize : number
+    - ingredients: string (comma delimitted)
+    - procedure : string
+    - pictures : img Object
+
+user 
+    - userID :string : primary key 
+    - username : string
+    - DOB : date
+    - description: string
+    - userPic: image Object
+    - recipeList: string[] 
+
+
+
